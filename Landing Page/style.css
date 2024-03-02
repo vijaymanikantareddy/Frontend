@@ -414,7 +414,7 @@ nav {
 }
 
 .price__btn:hover {
-  color: var(--white);
+  color: black;
   background-color: var(--secondary-color);
 }
 
