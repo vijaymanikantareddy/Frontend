@@ -12,6 +12,9 @@ const errorHandler = require("./middleware/error.js");
 //import routes
 const autoRoutes = require("./routes/authRoutes.js");
 const userRoutes = require("./routes/userRoutes");
+const jobTypeRoute = require("./routes/jobsTypeRoutes");
+const jobRoute = require("./routes/jobsRoutes");
+
 //database connection
 mongoose
   .connect(process.env.DATABASE, {
@@ -43,3 +46,5 @@ app.use(errorHandler);
 //Routes Middleware
 app.use("/api", autoRoutes);
 app.use("/api", userRoutes);
+app.use("/api", jobTypeRoute);
+app.use("/api", jobRoute);
